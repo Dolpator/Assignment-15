@@ -1,0 +1,25 @@
+@import "./imports/_normalize.scss";
+
+*{ box-sizing: border-box }
+img {
+   width: 100%;
+   display: block;
+}
+
+#app-container{
+   font-family: Helvetica, sans-serif;
+   padding: 0;
+   margin: 0, auto;
+}
+
+.input{
+   text-align: center;
+   padding: 20px;
+}
+.input-value{
+   border: 1px solid #19B5FE;
+}
+
+.thumbnail{
+   background-color: #C8F7C5;
+}

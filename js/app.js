@@ -35,24 +35,28 @@ var legStr  ='<div class = "col-sm-6 col-md-4">'
     })
 }
 
-
-
-
-var zipInput = document.querySelector('.input-value')
-//console.log(inputValue)
-var zipData = function(returnData){
-
-var keyPress = function(evt){
-   console.log(evt)
-         if(evt.keyCode === 13){
-            console.log('Key was Pressed!')
-         var zipCodeEl = document.querySelector('.input-value').innerHTML += evt.target.value;
-forEach(returnData.results, function(zipObj){
-         console.log(zipObj.govtrack_id)
-})
-}
-}
-}
-//zipInput.addEventListener('keydown', keyPress)
-
 $.getJSON('http://congress.api.sunlightfoundation.com/legislators?apikey=348a9f2dfe12419ea64eaad9b7fce6a0').then(legData)
+
+
+var zipInput = document.querySelector('.input-value');
+var zipData = function(returnData){
+   console.log(returnData)
+forEach(returnData.results, function(zipObj){
+   console.log(zipObj.state)
+})
+
+}
+
+var keyInput = function(evt){
+         if(evt.keyCode === 13){
+            console.log(evt.target.value)
+            var zipInputEl = evt.target.value;
+            if(zipInputEl === zipInput){
+               console.log(zipInputEl)
+            }
+         }
+   }
+      legislatorContainer.innerHTML;
+      zipInput.addEventListener('keydown', keyInput)
+
+$.getJSON('https://congress.api.sunlightfoundation.com/districts/locate?zip='+ zipInput +'&apikey=348a9f2dfe12419ea64eaad9b7fce6a0').then(zipData)

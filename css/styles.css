@@ -372,9 +372,7 @@ img {
   display: block; }
 
 #app-container {
-  font-family: Helvetica, sans-serif;
-  padding: 0;
-  margin: 0, auto; }
+  font-family: Helvetica, sans-serif; }
 
 .input {
   text-align: center;
